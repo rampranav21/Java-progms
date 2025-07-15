@@ -1,0 +1,20 @@
+/*Input&OutputHello world*/
+public class Main{
+  public static void main(String args[]){
+    System.out.println("Hello, World!");
+  }}
+
+/*Automated Coffee Machine Startup with Repeated Humorous Message*/
+public class Main{
+  public static void main(String args[]){
+    System.out.println("I need coffee too!!\nI need coffee too!!\nI need coffee too!!");
+  }}
+
+/*Customer Service System Welcome Screen*/
+import java.util.*;
+public class Main{
+  public static void main(String args[]){
+    Scanner sc = new Scanner(System.in);
+    String _prep= sc.nextLine();
+    System.out.println("Welcome\t"+_prep);
+  }}
