@@ -1,0 +1,77 @@
+//TemperatureCheckforOutdoorActivities
+import java.util.*;
+  public class Main{
+    public static void main(String args[]){
+      Scanner sc = new Scanner(System.in);
+      int temp = sc.nextInt();
+      if (temp > 0){
+          System.out.println("Safe for outdoor activities");
+      } else{
+        System.out.println("Too cold for outdoor activities");
+      }
+    }
+  }
+//EventSchedulingforLeapYearCelebrations
+import java.util.*;
+public class Main{
+  public static void main(String args[]){
+    Scanner sc = new Scanner(System.in);
+    int year = sc.nextInt();
+    if ((year % 4 == 0) && (year % 100!= 0) || (year % 400 == 0)){
+      System.out.println("Schedule Event");
+    } else {
+      System.out.println("No Event This Year");
+    }
+  }
+}
+//RockPaperScissors
+import java.util.*;
+public class Main{
+  public static void main(String args[]){
+    Scanner sc = new Scanner(System.in);
+    String move = sc.nextLine();
+    if(move.equals("rock")){
+      System.out.println("Paper");
+    }else if (move.equals("paper")){
+      System.out.println("Scissors");
+    }else {
+      System.out.println("Rock");
+    }
+  }
+}
+//Joey's Quest for the Trendy Meatball Sandwich
+import java.util.*;
+public class Main{
+  public static void main(String args[]){
+    Scanner sc = new Scanner(System.in);
+    int number = sc.nextInt();
+    int mid = (number % 100)/10;
+    if(number >= 100 && number <= 999){
+      if(mid % 3 == 0){
+        System.out.println("Trendy Number");
+      }else{
+        System.out.println("Not a Trendy Number");
+      }
+    }else{
+      System.out.println("Invalid Number");
+    }
+  }
+}
+//CarRentalChargesforaTravelAgency
+import java.util.*;
+public class Main{
+  public static void main(String args[]){
+    Scanner sc = new Scanner(System.in);
+    int R1 = sc.nextInt();
+    int N = sc.nextInt();
+    int R2 = sc.nextInt();
+    int X = sc.nextInt();
+    int hours = (int)Math.ceil(X / 60.0);
+    if(hours <= N){
+      System.out.println(hours * R1);
+    }else{
+      System.out.println((R1*N)+(R2 * (hours - N)));
+    }
+  }
+}
+
