@@ -1,0 +1,90 @@
+//Perfect Number Detection for Vault Security
+import java.util.*;
+public class Main{
+  static int detectPerfectNumber(int n){
+    int sum=0;
+    for(int i=1;i<n;i++){
+      if(n%i==0){
+        sum=sum+i;
+      }
+    }
+    if(sum==n){
+      return 1;
+    }else{
+      return sum;
+    }
+  }
+  public static void main(String args[]){
+    Scanner sc=new Scanner(System.in);
+    int a=sc.nextInt();
+    System.out.print(detectPerfectNumber(a));
+  }
+}
+//Finding the Leaders in Sales Data
+import java.util.*;
+public class Main {
+    static int SumOfLeaders(int arr[], int n){
+        int sum=0;
+        if(n>0){
+            for(int i=0;i<n;i++){
+                int el = arr[i], flag=0;
+                if(i<n-1){
+                    for(int j=i+1;j<n;j++){
+                        if(arr[j]>=el){
+                            flag=1;
+                            break;
+                        }else{
+                            flag=0;
+                        }
+                    }
+                    if(flag==0){
+                        sum+=el;
+                    }
+                }else{
+                    sum+=el;
+                }
+            }
+            return sum;
+        }else{
+            return -1;
+        }
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        for(int i=0;i<n;i++){
+            arr[i] = sc.nextInt();
+        }
+        int sum = SumOfLeaders(arr,n);
+        System.out.println(sum);
+    }
+}
+//Calculating the Total of Unique Products Sold
+import java.util.*;
+public class Main{
+  static int SumUniqueElements(int[] arr,int length)
+{
+  int maxid=10000;
+  int[] freq=new int[maxid+1];
+  for(int i=0;i<length;i++){
+    freq[arr[i]]++;
+  }
+  int sum=0;
+  for(int i=0;i<length;i++){
+    if(freq[arr[i]]==1){ 
+      sum+=arr[i];
+    }
+  }
+  return sum;
+}
+  public static void main(String args[]){
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    int [] arr=new int[n];
+    for(int i=0;i<n;i++){
+      arr[i]=sc.nextInt();
+    }
+    System.out.print(SumUniqueElements(arr,n));
+  }
+}
